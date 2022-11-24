@@ -1,52 +1,84 @@
-import styles from './Header.module.scss';
-
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
+import config from '../../../config';
+import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Header() {
+function Header({ to }) {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <a href="#" className={cx('brand')}>
+                <Link to={config.routes.home} className={cx('brand')}>
                     <img src="//assets.glxplay.io/web/images/logoglx.svg" alt="" className={cx('logo')} />
-                </a>
+                </Link>
                 <div className={cx('menu')}>
                     <ul className={cx('items')}>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
+                            <NavLink
+                                to={config.routes.home}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
                                 Trang chủ
-                            </a>
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Kho phim
-                            </a>
+                            <NavLink
+                                to={config.routes.storage}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Kho Phim
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Phim điện ảnh
-                            </a>
+                            <NavLink
+                                to={config.routes.movies}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Phim Điện Ảnh
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Phim bộ
-                            </a>
+                            <NavLink
+                                to={config.routes.seriesMovies}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Phim Bộ
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Phim thuê
-                            </a>
+                            <NavLink
+                                to={config.routes.rentalMovies}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Phim Thuê
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Khuyến mãi
-                            </a>
+                            <NavLink
+                                to={config.routes.promotion}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Khuyến Mãi
+                            </NavLink>
                         </li>
                         <li className={cx('btn-item')}>
-                            <a href="#" className={cx('item')}>
-                                Hỗ trợ
-                            </a>
+                            <NavLink
+                                to={config.routes.support}
+                                className={(nav) => cx('item', { active: nav.isActive })}
+                                exact={true}
+                            >
+                                Hỗ Trợ
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
@@ -61,5 +93,9 @@ function Header() {
         </div>
     );
 }
+
+Header.propTypes = {
+    to: PropTypes.string.isRequired,
+};
 
 export default Header;

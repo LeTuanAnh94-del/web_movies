@@ -11,6 +11,7 @@ function Defaultlayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
+            <div className={cx('content')}>{children}</div>
             <Footer />
         </div>
     );

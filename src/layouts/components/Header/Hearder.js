@@ -2,15 +2,27 @@ import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 import config from '../../../config';
 import styles from './Header.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Header({ to }) {
+function Header() {
+    const [background, setBackground] = useState(false);
+    const changeBackground = () => {
+        if (window.scrollY >= 90) {
+            setBackground(true);
+        } else {
+            setBackground(false);
+        }
+    };
+
+    window.addEventListener('scroll', changeBackground);
+
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx(background ? 'wrapper' : 'wrapper-scroll')}>
             <div className={cx('inner')}>
                 <Link to={config.routes.home} className={cx('brand')}>
                     <img src="//assets.glxplay.io/web/images/logoglx.svg" alt="" className={cx('logo')} />

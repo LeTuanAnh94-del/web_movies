@@ -1,3 +1,340 @@
-.wrapper {
-    background-color: red;
+.banner-slider {
+    position: relative;
+    width: 1519.2px;
+}
+
+.ribbon-spotlight {
+    height: 846px;
+    margin: 0;
+    position: relative;
+    width: 1519.2px;
+    white-space: nowrap;
+    touch-action: pan-y;
+    user-select: none;
+}
+
+.stick-list {
+    position: relative;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.stick-track {
+    left: 0;
+    margin-left: 0;
+    margin-right: -6080.8px;
+    position: relative;
+    top: 0;
+    width: 7600px;
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.lazy-banner {
+    float: left;
+    height: 864px;
+    left: 0px;
+    min-height: 1px;
+    position: relative;
+    top: 0;
+    width: 1520px;
+    z-index: 999;
+    opacity: 1;
+}
+
+.bg-banner {
+    height: 864px;
+    position: relative;
+}
+
+.img-banner {
+    display: block;
+    height: 864px;
+    max-width: 100%;
+    width: 1520px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.banner-gradiant-bottom {
+    bottom: -1px;
+    height: 864px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 1520px;
+}
+
+.banner-gradiant-top {
+    bottom: 0;
+    height: 864px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1520px;
+}
+
+.logo-content {
+    bottom: 259.2px;
+    left: 0;
+    margin-left: 60.8px;
+    position: absolute;
+    width: 547.2px;
+    color: rgb(255, 255, 255);
+}
+
+.name-img-banner {
+    display: block;
+    height: 184.312px;
+    max-width: 100%;
+    width: 460.775px;
+    font-size: 21.504px;
+    vertical-align: middle;
+}
+
+.banner-links {
+    display: flex;
+    font-size: 21.504px;
+    padding: 30px 0 20px;
+}
+
+.register {
+    align-items: center;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration-color: rgb(31, 35, 37);
+    text-decoration-line: none;
+    color: rgb(31, 35, 37);
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    border-radius: 100px;
+    height: 45px;
+    padding: 14px 24px;
+    transition: .3s ease-in-out;
+
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        background-color: #dde2e5;
+    }
+}
+
+.icon-register {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.watch-trailer {
+    align-items: center;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-decoration-color: rgb(31, 35, 37);
+    text-decoration-line: none;
+    color: rgb(31, 35, 37);
+    background-color: rgb(64, 68, 70);
+    background-image: none;
+    border-radius: 100px;
+    height: 45px;
+    padding: 14px 24px;
+    transition: .3s ease-in-out;
+
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        background-color: #9ca1a3;
+    }
+}
+
+.play-video {
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.icon-video {
+    box-sizing: border-box;
+    display: block;
+    height: 27px;
+    width: 27px;
+    mask: none;
+}
+
+.title-watch {
+    color: rgb(255, 255, 255);
+}
+
+.banner-description {
+    width: 547.2px;
+    font-size: 21.504px;
+    line-height: normal;
+    text-shadow: rgba(0, 0, 0, 0.65) 0px 2px 4px;
+    white-space: normal;
+}
+
+.detail {
+    align-items: center;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 16px;
+    text-decoration-color: rgba(255, 255, 255, 0.55);
+    text-decoration-line: none;
+    color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(0, 0, 0, 0);
+
+    -webkit-box-align: center;
+}
+
+.wrap-slide {
+    align-items: center;
+    bottom: 135px;
+    display: flex;
+    position: absolute;
+    right: 60.725px;
+    z-index: 1;
+    transform: none;
+
+    -webkit-box-align: center;
+}
+
+.slick-dots {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 112px;
+    text-align: center;
+}
+
+.slick {
+    display: block;
+    height: 8px;
+    position: relative;
+    width: 8px;
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0 0.5rem 0 0;
+}
+
+.slick-active {
+    display: block;
+    height: 8px;
+    position: relative;
+    width: 48px;
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0 0.5rem 0 0;
+}
+
+.btn-slick {
+    align-items: flex-start;
+    display: block;
+    height: 10px;
+    padding: 5px;
+    width: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgb(155, 155, 155);
+    border-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transform: 0.3s;
+}
+
+.btn-slick-active {
+    align-items: flex-start;
+    display: block;
+    height: 10px;
+    padding: 5px;
+    width: 48px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0;
+    line-height: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: rgb(235, 235, 235);
+    border-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transform: 0.3s;
+}
+
+.wrap-arrows {
+    align-items: center;
+    display: flex;
+    margin-left: 20px;
+}
+
+.prev-arrow {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgba(29,29,31,.4);
+    transition: .3s ease-in-out;
+
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.next-arrow {
+    align-items: center;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px;
+    cursor: pointer;
+    border-radius: 50px;
+    background: rgba(29,29,31,.4);
+    transition: .3s ease-in-out;
+    margin-left: 8px;
+
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        background: #fff;
+    }
+}
+
+.arrow {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+
+    &:hover {
+        fill: #333;
+    }
 }

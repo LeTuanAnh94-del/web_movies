@@ -1,0 +1,49 @@
+.lazy-banner {
+    float: left;
+    height: 864px;
+    left: 0px;
+    min-height: 1px;
+    position: relative;
+    top: 0;
+    width: 1520px;
+    z-index: 999;
+    opacity: 1;
+}
+
+.bg-banner {
+    height: 864px;
+    position: relative;
+}
+
+.img-banner {
+    display: block;
+    height: 864px;
+    max-width: 100%;
+    width: 1520px;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+.banner-gradiant-bottom {
+    bottom: -1px;
+    height: 864px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    width: 1520px;
+    background: linear-gradient(0deg, #111 9%, rgba(0, 0, 0, 0.22) 24%, rgba(0, 0, 0, 0)),
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.banner-gradiant-top {
+    bottom: 0;
+    height: 864px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1520px;
+    background: linear-gradient(180deg, rgba(17, 17, 17, 0.19) 2%, rgba(0, 0, 0, 0) 6%, rgba(0, 0, 0, 0) 0),
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+

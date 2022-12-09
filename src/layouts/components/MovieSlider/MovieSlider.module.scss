@@ -1,0 +1,133 @@
+.heading {
+    display: flex;
+    align-items: center;
+    margin: 0px 4% 1vw;
+    -webkit-box-align: center;
+}
+
+.title {
+    position: relative;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+}
+
+.title:hover {
+    .icon-link {
+        padding-left: 13px;
+    }
+}
+
+.icon-link {
+    box-sizing: content-box;
+    height: 26px;
+    width: 25.6px;
+    top: 16px;
+    left: 186px;
+    padding-left: 0;
+    position: absolute;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    transform: translateY(-50%);
+    transition: all 300ms ease 0s;
+}
+
+.row-container {
+    z-index: 0;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    padding: 0 4%;
+
+    &:hover {
+        .slide-dots {
+            opacity: 1;
+        }
+    }
+}
+
+.arrow-left {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 200px;
+    width: 50.7625px;
+    z-index: 3;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background: rgba(20, 20, 20, 0.5);
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        .active-path {
+            scale: 1.5;
+        }
+    }
+}
+
+.arrow-right {
+    align-items: center;
+    display: flex;
+    height: 400px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 60.7625px;
+    z-index: 3;
+    cursor: pointer;
+    transform: translateY(-50%);
+    background: rgba(20, 20, 20, 0.5);
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        .active-path {
+            scale: 1.5;
+        }
+    }
+}
+
+.active-path {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    fill: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.wrapper {
+    left: 0;
+    overflow-x: visible;
+    position: relative;
+    top: 0;
+}
+
+.slide-dots {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 8px;
+    top: -15px;
+    width: 1397.68px;
+    opacity: 0;
+    -webkit-box-pack: end;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.slide-dot {
+    height: 2px;
+    margin-left: 3px;
+    width: 15px;
+    opacity: 0.25;
+    background: rgb(193, 193, 193);
+}
+
+.slides {
+    transform: translate3d(0%, 0px, 0px);
+}

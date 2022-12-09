@@ -1,0 +1,20 @@
+.img-portrait {
+    height: 400px;
+    left: 135px;
+    top: 270px;
+    width: 270px;
+    opacity: 1;
+    transition: all 0.5s ease 0s;
+
+    &:hover {
+        opacity: 0.4;
+    }
+}
+
+.gradient {
+    position: absolute;
+    width: calc(100% + 1.5px);
+    height: 41%;
+    bottom: 0;
+    left: -0.5px;
+}

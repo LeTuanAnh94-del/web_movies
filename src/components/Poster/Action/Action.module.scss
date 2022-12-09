@@ -1,0 +1,116 @@
+.trailer-icon {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        scale: 1.2;
+
+        .note-list {
+            opacity: 1;
+        }
+    }
+}
+
+.icon-trailer {
+    width: 24px;
+    height: 24px;
+}
+
+.note-list {
+    top: 0;
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    transform: translate(-50%, -100%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+    left: 50%;
+}
+
+.clip-path {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.path {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background: rgb(255, 255, 255);
+    clip-path: polygon(0% 0%, 100% 0px, 100% 88%, 55% 90%, 50% 100%, 45% 87%, 0px 87%);
+}
+
+.txt-path {
+    color: rgb(51, 51, 51);
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    top: -3px;
+}
+
+.play-icon {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        .note-list {
+            opacity: 1;
+        }
+    }
+}
+
+.icon-play {
+    width: 25px;
+    fill: #ffffff;
+
+    &:hover {
+        fill: rgb(0, 122, 255);
+    }
+}
+
+.add-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+
+    &:hover {
+        scale: 1.2;
+
+        .note-list {
+            opacity: 1;
+        }
+    }
+}
+
+.add-list-icon {
+    width: 14px;
+    fill: #ffffff;
+}

@@ -33,7 +33,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.home}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Trang chủ
                             </NavLink>
@@ -42,7 +42,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.storage}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Kho Phim
                             </NavLink>
@@ -51,7 +51,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.movies}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Phim Điện Ảnh
                             </NavLink>
@@ -60,7 +60,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.seriesMovies}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Phim Bộ
                             </NavLink>
@@ -69,7 +69,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.rentalMovies}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Phim Thuê
                             </NavLink>
@@ -78,7 +78,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.promotion}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Khuyến Mãi
                             </NavLink>
@@ -87,7 +87,7 @@ function Header() {
                             <NavLink
                                 to={config.routes.support}
                                 className={(nav) => cx('item', { active: nav.isActive })}
-                                exact={true}
+                                exact="true"
                             >
                                 Hỗ Trợ
                             </NavLink>
@@ -96,9 +96,9 @@ function Header() {
                 </div>
                 <ul className={cx('item-login')}>
                     <li className={cx('btn-login')}>
-                        <a href="#" className={cx('login')}>
+                        <NavLink to={config.routes.home} className={cx('login')}>
                             Đăng Nhập
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

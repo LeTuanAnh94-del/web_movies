@@ -80,3 +80,21 @@ img, svg {
     overflow: hidden;
 }
 
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+address {
+    font-style: normal;
+    line-height: inherit;
+}
+
+h4 {
+    margin-top: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}

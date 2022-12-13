@@ -7,18 +7,18 @@ import styles from './DefaultLayout.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Defaultlayout({ children }) {
+function DefaultLayout({ children }) {
     return (
         <div className={cx('wrapper')}>
             <Header />
             <div className={cx('content')}>{children}</div>
-            <Footer />
+            <Footer className={cx('footer')} />
         </div>
     );
 }
 
-Defaultlayout.propTypes = {
+DefaultLayout.propTypes = {
     children: PropTypes.node.isRequired,
 };
 
-export default Defaultlayout;
+export default DefaultLayout;

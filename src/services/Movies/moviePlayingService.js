@@ -1,6 +1,6 @@
-import * as httpRequest from '../utils/httpRequest';
+import * as httpRequest from '../../utils/httpRequest';
 
-export const getMovies = async ({ apiKey, language, page }) => {
+export const getMoviePlaying = async ({ apiKey, language, page }) => {
     try {
         const res = await httpRequest.get('movie/now_playing', {
             params: {
@@ -9,7 +9,7 @@ export const getMovies = async ({ apiKey, language, page }) => {
                 page,
             },
         });
-        return res.results.slice(0, 5);
+        return res.results;
     } catch (error) {
         console.log(error);
     }

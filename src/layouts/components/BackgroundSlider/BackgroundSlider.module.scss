@@ -10,14 +10,25 @@
     padding: 0 4%;
 }
 
+.wrapper {
+    left: 0;
+    overflow-x: visible;
+    position: relative;
+    top: 0;
+}
+
+.slides {
+    transform: translate3d(0%, 0px, 0px);
+}
+
 .arrow-left {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 152px;
     justify-content: center;
     left: 0;
     position: absolute;
-    top: 200px;
+    top: 50%;
     width: 50.7625px;
     z-index: 3;
     cursor: pointer;
@@ -36,11 +47,11 @@
 .arrow-right {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 152px;
     justify-content: center;
     position: absolute;
     right: 0;
-    top: 200px;
+    top: 50%;
     width: 60.7625px;
     z-index: 3;
     cursor: pointer;
@@ -64,13 +75,6 @@
     transition: all 0.2s ease-in-out 0s;
 }
 
-.wrapper {
-    left: 0;
-    overflow-x: visible;
-    position: relative;
-    top: 0;
-}
 
-.slides {
-    transform: translate3d(0%, 0px, 0px);
-}
+
+

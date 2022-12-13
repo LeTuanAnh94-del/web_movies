@@ -1,8 +1,8 @@
-import * as httpRequest from '../utils/httpRequest';
+import * as httpRequest from '../../utils/httpRequest';
 
-export const getMoviePlaying = async ({ apiKey, language, page }) => {
+export const getMoviePopular = async ({ apiKey, language, page }) => {
     try {
-        const res = await httpRequest.get('movie/now_playing', {
+        const res = await httpRequest.get('movie/popular', {
             params: {
                 api_key: apiKey,
                 language,

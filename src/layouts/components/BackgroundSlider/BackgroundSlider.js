@@ -1,17 +1,16 @@
 import classNames from 'classnames/bind';
 import { useRef } from 'react';
-import Slider from 'react-slick';
-import { IconLeftArrow, IconRightArrow } from '../../../components/Icons';
-import Poster from '../../../components/Poster';
-import Heading from '../Heading';
 
-import styles from './MovieSlider.module.scss';
+import styles from './BackgroundSlider.module.scss';
+import Heading from '../Heading';
+import { IconLeftArrow, IconRightArrow } from '../../../components/Icons';
+import Slider from 'react-slick';
+import Background from '../../../components/Background';
 
 const cx = classNames.bind(styles);
 
-function MovieSlider({ data, label }) {
+function BackgroundSlider({ data, label }) {
     const sliderRef = useRef();
-
     const handlePrev = () => {
         sliderRef.current.slickPrev();
     };
@@ -32,7 +31,7 @@ function MovieSlider({ data, label }) {
     };
 
     return (
-        <div className={cx('block-ribbon_block')}>
+        <div className={cx('block-ribbon-block')}>
             <section className={cx('block-ribbon')}>
                 <Heading label={label} />
                 <div className={cx('row-container')}>
@@ -40,9 +39,9 @@ function MovieSlider({ data, label }) {
                         <IconLeftArrow className={cx('active-path')} />
                     </div>
                     <div className={cx('wrapper')}>
-                        <Slider ref={sliderRef} className={cx('slides')} {...settings}>
+                        <Slider className={cx('slides')} ref={sliderRef} {...settings}>
                             {data.map((movie, index) => (
-                                <Poster key={index} data={movie} />
+                                <Background key={index} data={movie} />
                             ))}
                         </Slider>
                     </div>
@@ -55,4 +54,4 @@ function MovieSlider({ data, label }) {
     );
 }
 
-export default MovieSlider;
+export default BackgroundSlider;

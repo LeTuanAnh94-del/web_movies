@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 
-import { IconTrailer, IconPlay, IconAddList } from '../../Icons/Icons';
+import { IconTrailer, IconPlay, IconAddList } from '../Icons/Icons';
 import styles from './Action.module.scss';
 
 const cx = classNames.bind(styles);

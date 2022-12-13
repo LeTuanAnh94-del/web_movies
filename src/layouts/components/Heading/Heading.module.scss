@@ -1,0 +1,34 @@
+.heading {
+    display: flex;
+    align-items: center;
+    margin: 0px 4% 1vw;
+    -webkit-box-align: center;
+}
+
+.title {
+    position: relative;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+}
+
+.title:hover {
+    .icon-link {
+        padding-left: 13px;
+    }
+}
+
+.icon-link {
+    box-sizing: content-box;
+    height: 26px;
+    width: 25.6px;
+    top: 16px;
+    padding-left: 0;
+    position: absolute;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+    transform: translateY(-50%);
+    transition: all 300ms ease 0s;
+}
+

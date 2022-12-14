@@ -18,7 +18,7 @@ function Category({ data, label }) {
             <div className={cx('title')}>{label}</div>
             <div className={cx('dropdown')}>
                 <div className={cx('dropbtn')} onClick={handleDropdown}>
-                    Choose Genres
+                    Chọn thể loại
                     <ArrowUp className={cx('arrow-up')} />
                 </div>
                 <div className={cx(`dropdown-content${dropdown == true ? '-active' : ''}`)}>

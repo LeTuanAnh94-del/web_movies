@@ -67,24 +67,6 @@ function Header() {
                         </li>
                         <li className={cx('btn-item')}>
                             <NavLink
-                                to={config.routes.rentalMovies}
-                                className={(nav) => cx('item', { active: nav.isActive })}
-                                exact="true"
-                            >
-                                Phim Thuê
-                            </NavLink>
-                        </li>
-                        <li className={cx('btn-item')}>
-                            <NavLink
-                                to={config.routes.promotion}
-                                className={(nav) => cx('item', { active: nav.isActive })}
-                                exact="true"
-                            >
-                                Khuyến Mãi
-                            </NavLink>
-                        </li>
-                        <li className={cx('btn-item')}>
-                            <NavLink
                                 to={config.routes.support}
                                 className={(nav) => cx('item', { active: nav.isActive })}
                                 exact="true"

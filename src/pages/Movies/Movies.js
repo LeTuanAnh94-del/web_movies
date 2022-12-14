@@ -11,7 +11,7 @@ import * as movieAnimationService from '../../services/Movies/movieAnimationServ
 import * as movieRomanceService from '../../services/Movies/movieRomanceService';
 import * as movieActionService from '../../services/Movies/movieActionService';
 import * as movieHorrorService from '../../services/Movies/movieHorrorService';
-import * as genreService from '../../services/genreService';
+import * as genreService from '../../services/Movies/genreService';
 import Banner from '../../layouts/components/Banner';
 import MovieSlider from '../../layouts/components/MovieSlider';
 import Category from '../../components/Category';

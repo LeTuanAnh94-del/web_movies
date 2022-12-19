@@ -11,13 +11,12 @@ import * as movieAnimationService from '../../services/Movies/movieAnimationServ
 import * as movieRomanceService from '../../services/Movies/movieRomanceService';
 import * as movieActionService from '../../services/Movies/movieActionService';
 import * as movieHorrorService from '../../services/Movies/movieHorrorService';
-import * as genreService from '../../services/Movies/genreService';
+import * as genreService from '../../services/Movies/GenreService';
 import Banner from '../../layouts/components/Banner';
 import MovieSlider from '../../layouts/components/MovieSlider';
 import Category from '../../components/Category';
 
 const cx = classNames.bind(styles);
-
 const API_KEY = '7075a527c5f87215b1ec4cffdd7567a4';
 const LANGUAGE = 'en-US';
 const SORT_BY = 'popularity.desc';

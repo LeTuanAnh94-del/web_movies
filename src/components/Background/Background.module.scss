@@ -19,13 +19,7 @@
     transition-duration: 0.5s;
 
     &:hover {
-        opacity: 0.5;
         scale: 1.07;
-
-        .detail-enter {
-            opacity: 1;
-            z-index: 1000;
-        }
     }
 }
 
@@ -35,72 +29,4 @@
     top: 0;
     left: 0;
     transition-duration: 0.5s;
-}
-
-.detail-enter {
-    opacity: 0;
-    transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
-    position: absolute;
-    left: 10%;
-    top: 20%;
-}
-
-.action {
-    pointer-events: initial;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 24px;
-    transition: all 0.5s ease 0s;
-    z-index: 1000;
-    -webkit-box-align: center;
-    -webkit-box-pack: center;
-}
-
-.border-right {
-    height: 21px;
-    width: 2px;
-    background: rgb(255, 255, 255);
-    margin: 0 25px;
-    border-right: 0.0625rem solid #e9ecef !important;
-}
-
-
-.detail-enter-done {
-    opacity: 1;
-    pointer-events: auto;
-    position: absolute;
-    box-sizing: border-box;
-    left: 0;
-    width: 100%;
-    bottom: -30px;
-    padding: 11px -10px;
-}
-
-.movie-name {
-    font-size: 16px;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    line-height: 22px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-
-.movie-detail {
-    margin: 3.6px 0px 0px;
-    padding: 0;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.movie-language {
-    padding-right: 20px;
-    position: relative;
-    list-style-type: none;
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    display: inline-block;
 }

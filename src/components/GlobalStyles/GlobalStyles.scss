@@ -98,3 +98,10 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
+
+button {
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    border-radius: 0;
+}

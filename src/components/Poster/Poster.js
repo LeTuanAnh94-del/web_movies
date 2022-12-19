@@ -22,7 +22,7 @@ function Poster({ data }) {
                                 <ActionAdd />
                             </Action>
                             <a href="#">
-                                <div className={cx('movie-name')}>{data.title}</div>
+                                <div className={cx('movie-name')}>{data.title ? data.title : data.name}</div>
                                 <div className={cx('movie-detail')}>
                                     <div className={cx('movie-language')}>{data.original_language}</div>
                                 </div>

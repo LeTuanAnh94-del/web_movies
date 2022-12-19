@@ -6,9 +6,13 @@ const cx = classNames.bind(styles);
 
 function ImageBackground({ data }) {
     return (
-        <div>
+        <div className={cx('wrapper')}>
             <a>
-                <img className={cx('img')} src={`https://image.tmdb.org/t/p/original/${data}`} />
+                <img
+                    className={cx('img')}
+                    src="https://assets.glxplay.io/images/w400/categories/khampha_landscape_1.png"
+                />
+                <div className={cx('genre')}>{data}</div>
             </a>
         </div>
     );

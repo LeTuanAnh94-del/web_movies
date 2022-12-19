@@ -1,10 +1,13 @@
 import classNames from 'classnames/bind';
 import { useRef } from 'react';
 import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import 'react-slideshow-image/dist/styles.css';
+
 import { IconLeftArrow, IconRightArrow } from '../../../components/Icons';
 import Poster from '../../../components/Poster';
 import Heading from '../Heading';
-
 import styles from './MovieSlider.module.scss';
 
 const cx = classNames.bind(styles);

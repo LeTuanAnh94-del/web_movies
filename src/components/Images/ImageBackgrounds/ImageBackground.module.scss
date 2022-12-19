@@ -6,9 +6,18 @@
     left: 0;
     opacity: 1;
     background-size: cover;
-    transition: all 0.5s ease 0s;
+}
 
-    &:hover {
-        opacity: 0.4;
-    }
+.genre {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    width: 100%;
+    color: rgba(255, 255, 255);
+    white-space: pre-wrap;
+    pointer-events: none;
+    
 }

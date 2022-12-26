@@ -1,116 +1,344 @@
 import classNames from 'classnames/bind';
-import { Fade } from 'react-slideshow-image';
-import { useState, useEffect, useRef } from 'react';
 
 import styles from './Home.module.scss';
-import * as BannerService from '../../services/Home/BannerService';
+import Header from '../../pages/Home/Header';
 
 const cx = classNames.bind(styles);
-const API_KEY = '7075a527c5f87215b1ec4cffdd7567a4';
 
 function Home() {
-    const [banner, setBanner] = useState([]);
-    const [slickActiveIndex, setSlickActiveIndex] = useState(0);
-
-    const changeRef = useRef();
-
-    const handleNext = () => {
-        changeRef.current.goNext();
-    };
-    const handleBack = () => {
-        changeRef.current.goBack();
-    };
-    const handleChangeIndex = (index) => {
-        setSlickActiveIndex(index);
-        changeRef.current.goTo(index);
-    };
-
-    useEffect(() => {
-        BannerService.getBanner({ apiKey: API_KEY, language: 'en_US', page: 1 })
-            .then((data) => {
-                setBanner((prevBanner) => [...prevBanner, ...data]);
-            })
-            .catch((error) => console.log(error));
-    }, []);
-
-    const props = {
-        duration: 1000,
-        arrows: false,
-        infinite: true,
-    };
-
     return (
         <div className="wrapper">
             <div className={cx('section-landing-page')}>
-                <div className={cx('headers')}>
-                    <div className={cx('prev')} onClick={handleBack}>
-                        <svg
-                            className={cx('svg')}
-                            aria-hidden="true"
-                            focusable={false}
-                            data-prefix="far"
-                            data-icon="chevron-left"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 256 512"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M231.293 473.899l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L70.393 256 251.092 74.87c4.686-4.686 4.686-12.284 0-16.971L231.293 38.1c-4.686-4.686-12.284-4.686-16.971 0L4.908 247.515c-4.686 4.686-4.686 12.284 0 16.971L214.322 473.9c4.687 4.686 12.285 4.686 16.971-.001z"
-                                className={cx('path')}
-                            />
-                        </svg>
-                    </div>
-                    <div className={cx('slick-list')}>
-                        <Fade
-                            onChange={(prevIndex, nexIndex) => handleChangeIndex(nexIndex)}
-                            {...props}
-                            ref={changeRef}
-                            className={cx('slick-track')}
-                        >
-                            {banner.map((data, index) => (
-                                <div className={cx('item-header')}>
-                                    <a href="">
+                <Header />
+                <div className={cx('landing-page-1')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('inner-row-1')}>
+                                <h2 className={cx('title-landing-page')}>
+                                    Giải trí online không giới hạn hàng nghìn giờ nội dung đậm chất Việt
+                                </h2>
+                                <div className={cx('group-description')}>
+                                    <p className={cx('description')}>Bom tấn Việt chiếu rạp độc quyền và sớm nhất</p>
+                                    <p className={cx('description')}>Thư viện phim Việt lớn nhất Việt Nam</p>
+                                    <p className={cx('description')}>Phim bộ độc quyền của Galaxy Play</p>
+                                    <p className={cx('description')}>Phim bộ hot Châu Á</p>
+                                    <p className={cx('description')}>Siêu phẩm điện ảnh Hollywood và Disney</p>
+                                </div>
+                                <div className={cx('group-partner')}>
+                                    <p className={cx('description')}>
+                                        100+ đối tác sản xuất phim trong nước và quốc tế
+                                    </p>
+                                    <div className={cx('list-partner-1')}>
                                         <img
-                                            key={index}
-                                            className={cx('spotlight-web')}
-                                            src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
+                                            style={{ width: '44px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/sony2.png"
                                             alt=""
                                         />
-                                    </a>
+                                        <img
+                                            style={{ width: '82px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/universal.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            style={{ width: '84px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/disney.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            style={{ width: '100px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/MGM.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('list-partner-2')}>
+                                        <img
+                                            style={{ width: '130px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/studio-dragon-1.png"
+                                            alt=""
+                                        />
+                                        <img
+                                            style={{ width: '148px' }}
+                                            className={cx('partner-item')}
+                                            src="https://assets.glxplay.io/web/responsive/w200/hk-entertainment.png"
+                                            alt=""
+                                        />
+                                    </div>
                                 </div>
-                            ))}
-                        </Fade>
+                            </div>
+                            <div className={cx('inner-row-2')}>
+                                <div className={cx('row')}>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/Eve_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/ChiMeHocYeu2_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/DoctorStrangeInTheMultiverseOfMadness_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/Cinderella2021_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/ChiaKhoaTramTy_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('poster-img')}>
+                                        <img
+                                            className={cx('poster')}
+                                            src="https://assets.glxplay.io/web/responsive/w300/MyHeroAcademiaWorldHeroesMission_1000x1500.jpg"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className={cx('next')} onClick={handleNext}>
-                        <svg
-                            className={cx('svg')}
-                            aria-hidden="true"
-                            focusable={false}
-                            data-prefix="far"
-                            data-icon="chevron-right"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 256 512"
-                        >
-                            <path
-                                className={cx('path')}
-                                fill="currentColor"
-                                d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"
-                            />
-                        </svg>
-                    </div>
-                    <ul className={cx('slick-dots')}>
-                        {banner.map((banner, index) => (
-                            <li
-                                onClick={() => handleChangeIndex(index)}
-                                className={cx(`slick${slickActiveIndex == index ? '-active' : ''}`)}
-                            >
-                                <button className={cx('slick-slide-control')}></button>
-                            </li>
-                        ))}
-                    </ul>
                 </div>
+                <div className={cx('landing-page-2')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('wrap-description')}>
+                                <p className={cx('description')}>Chia sẻ từng khoảnh khắc cùng người thân và bạn bè</p>
+                                <div className={cx('group-super-text')}>
+                                    <div className="wrap-super-text">
+                                        <div className={cx('super-text')}>
+                                            <span>1</span>
+                                            <h3>
+                                                Tài khoản
+                                                <br></br>
+                                                Cao Cấp
+                                            </h3>
+                                        </div>
+                                        <div className={cx('description')}>Đăng nhập</div>
+                                        <div className={cx('super-text')}>
+                                            <span>5</span>
+                                            <h3>Thiết bị</h3>
+                                        </div>
+                                        <div className={cx('description')}>Xem trên</div>
+                                        <div className={cx('super-text')}>
+                                            <span>4</span>
+                                            <h3>
+                                                Thiết bị song song
+                                                <br></br>
+                                                cùng lúc
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="">
+                                    <div className={cx('btn-register-now')}>Đăng ký ngay</div>
+                                </a>
+                            </div>
+                            <div className={cx('wrap-img')}>
+                                <img
+                                    src="https://assets.glxplay.io/web/responsive/w1000/Spotlight%20on%20Device_VER2%20X1.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx('landing-page-3')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('wrap-img')}>
+                                <img
+                                    src="https://assets.glxplay.io/web/responsive/w500/home-page-iphone-12-pro-max.png"
+                                    alt=""
+                                />
+                            </div>
+                            <div className={cx('wrap-description')}>
+                                <h2 className={cx('title-landing-page')}>
+                                    Nội dung đặc sắc, trải nghiệm mượt mà trên thiết bị di động
+                                </h2>
+                                <div className="group-description">
+                                    <p className={cx('description')}>1 tài khoản Galaxy Play Mobile</p>
+                                    <p className={cx('description')}>1 Smartphone hoặc máy tính bảng</p>
+                                    <p className={cx('description')}>Xem mọi lúc, mọi nơi!</p>
+                                </div>
+                                <a href="">
+                                    <div className={cx('btn-register-now')}>Đăng ký ngay</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx('landing-page-4')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('wrap-description')}>
+                                <h2 className={cx('title-landing-page')}>Không chèn quảng cáo khi xem phim</h2>
+                                <div className={cx('group-description')}>
+                                    <p className={cx('description')}>
+                                        Tận hưởng trọn vẹn, không gián đoạn mỗi phút giây cảm xúc khi thưởng thức bộ
+                                        phim yến thích.
+                                    </p>
+                                </div>
+                                <a href="">
+                                    <div className={cx('btn-register-now')}>Đăng ký ngay</div>
+                                </a>
+                            </div>
+                            <div className={cx('wrap-img')}>
+                                <img
+                                    className={cx('img')}
+                                    src="https://assets.glxplay.io/web/responsive/plain/WEB-GP_1221_TV_KID_500x460.png"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx('partner-page')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('inner-row')}>
+                                <div className={cx('description')}>Các đối tác của Galaxy Play</div>
+                                <div className={cx('brand-1')}>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Samsung.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Sony.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_TCL.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Asanzo.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Casper.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Skyworth.png"
+                                            alt=""
+                                            width={'165'}
+                                        />
+                                    </div>
+                                </div>
+                                <div className={cx('brand-2')}>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'150'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_LG.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'165'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_FPT.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'165'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_MyTV.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'150'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Mobifone.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'150'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_GooglePlay.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'165'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_AppStore.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className={cx('item')}>
+                                        <img
+                                            width={'165'}
+                                            src="https://assets.glxplay.io/web/responsive/plain/_Dolby.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx('landing-page-5')}>
+                    <div className={cx('container-fluid')}>
+                        <div className={cx('row')}>
+                            <div className={cx('inner-row')}>
+                                <h2 className={cx('title-landing-page')}>Thoải mái khi xem phim trên TV tại nhà</h2>
+                                <div className={cx('description')}>
+                                    Đắm chìm trong từng thước phim cùng công nghệ hình ảnh 4K sắc nét và dải âm thanh
+                                    Dolby 5.1 sống động duy nhất tại Việt Nam.
+                                </div>
+                                <a href="">
+                                    <div className={cx('btn-register-now')}>Đăng ký ngay</div>
+                                </a>
+                                <img src="https://assets.glxplay.io/web/responsive/plain/TV-tizen.png" alt="" />
+                                <h2 className={cx('title-landing-page')}>
+                                    Vũ trụ giải trí điện ảnh, đậm màu sắc Việt. Chất lượng tuyệt đỉnh, trải nghiệm mượt
+                                    mà.
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={cx('space')}></div>
             </div>
         </div>
     );

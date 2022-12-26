@@ -72,6 +72,11 @@ img, svg {
     max-width: 100%;
 }
 
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
 .slick-list {
     overflow: visible;
 }
@@ -90,7 +95,7 @@ address {
     line-height: inherit;
 }
 
-h4 {
+h4, h2, p {
     margin-top: 0;
 }
 

@@ -1,0 +1,17 @@
+.svg {
+    width: 2.1875rem;
+    height: 2.1875rem;
+
+    &:hover {
+        .path {
+            fill: #fff;
+        }
+    }
+}
+
+
+.path {
+    fill: rgba(115, 119, 112, .3);
+    transition-duration: .3s;
+
+}

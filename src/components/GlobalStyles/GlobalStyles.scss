@@ -1,4 +1,4 @@
-@import "normalize.css";
+@import 'normalize.css';
 
 * {
     padding: 0;
@@ -43,7 +43,7 @@ html {
     text-size-adjust: 100%;
 
     -webkit-tap-highlight-color: #222a4200;
-    -webkit-font-smoothing: subpixel-antialiased
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body {
@@ -56,7 +56,7 @@ body {
     scroll-behavior: auto;
 }
 
-a { 
+a {
     cursor: pointer;
     white-space: normal;
     outline: none;
@@ -65,8 +65,8 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
-
-img, svg {
+img,
+svg {
     border-style: none;
     vertical-align: middle;
     max-width: 100%;
@@ -95,8 +95,11 @@ address {
     line-height: inherit;
 }
 
-h4, h2, p {
+h4,
+h2,
+p {
     margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 li {

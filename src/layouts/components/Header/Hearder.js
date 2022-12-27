@@ -78,7 +78,7 @@ function Header() {
                 </div>
                 <ul className={cx('item-login')}>
                     <li className={cx('btn-login')}>
-                        <NavLink to={config.routes.home} className={cx('login')}>
+                        <NavLink to={config.routes.login} className={cx('login')}>
                             Đăng Nhập
                         </NavLink>
                     </li>

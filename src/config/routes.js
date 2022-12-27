@@ -6,6 +6,7 @@ const routes = {
     seriesMovies: '/seriesMovies',
     storage: '/storage',
     support: '/support',
+    login: '/login',
 };
 
 export default routes;
